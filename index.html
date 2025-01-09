@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen 360° con Photo Sphere Viewer</title>
+
+  <!-- Enlace al archivo CSS de Photo Sphere Viewer -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.css" />
+
+  <!-- Vincular el archivo CSS local -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Estilos para el contenedor del visor */
+    #viewer {
+      width: 100%;
+      height: 100vh; /* Usamos el 100% del alto de la ventana */
+      margin: 0;
+    }
+
+    /* Estilos para el botón de cambio de imagen */
+    #toggle-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    /* Efecto hover para el botón */
+    #toggle-button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+    <div id="viewer"></div>
+
+    <!-- Botón para cambiar entre las imágenes -->
+    <button id="toggle-button">Cambiar a Sala 2</button>
+
+    <!-- Mapeo de imports y módulos ES6 -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+                "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@5/index.module.js"
+            }
+        }
+    </script>
+
+    <!-- Script JS para el visor -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
